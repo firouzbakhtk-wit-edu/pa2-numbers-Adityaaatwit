@@ -7,14 +7,13 @@ public class PA2b {
 	// TODO: document this function
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("Enter the value of a,b,and c :");
+		System.out.print("Enter a b c: ");
 		
-		int a= input.nextInt();
-		int b= input.nextInt();
-		int c= input.nextInt();
+		double a= input.nextDouble();
+		double b= input.nextDouble();
+	    double c= input.nextDouble();
 		
 		double d= (b*b)-(4*a*c);
-		 System.out.printf("The value of discriminant is: %.2f%n", d);
 		
 		double sqrtOfD= Math.sqrt(d);
 		double d1= -b/(2*a);
@@ -22,10 +21,10 @@ public class PA2b {
 		double d3 = ((-b)-(sqrtOfD))/(2*a);
 		
 		if(d<0) {
-			System.out.println("Roots are imaginary");
+			System.out.println("Roots: imaginary");
 			return;
 		}else if(d==0) {
-			System.out.printf("There is only one root: %.2f%n", d1);
+			System.out.printf("Root: %.2f%n", d1);
 			return;
 		}else {
 			if(d2>d3) {
